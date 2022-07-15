@@ -3,12 +3,18 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps {
+            steps {   
+                withMaven(maven:'Maven'){
+                sh 'mvn clean install'
+                }
                 echo 'Building..'
             }
         }
         stage('Test') {
             steps {
+                withMaven(maven:'Maven'){
+                sh 'mvn clean compile'
+                }
                 echo 'Testing..'
             }
         }
