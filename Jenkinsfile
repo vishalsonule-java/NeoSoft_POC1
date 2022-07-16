@@ -3,7 +3,6 @@ pipeline {
     
     environment {
        DISABLE_AUTH = 'true'
-        JAVA_HOME "C:\Program Files\Java\jdk1.8.0_221"
    }
 
     tools {
