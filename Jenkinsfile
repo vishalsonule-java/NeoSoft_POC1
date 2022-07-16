@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    
+    environment {
+       DISABLE_AUTH = 'true'
+        JAVA_HOME "C:\Program Files\Java\jdk1.8.0_221"
+   }
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
